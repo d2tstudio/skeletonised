@@ -1,0 +1,480 @@
+/*
+Theme Name: 	Skeletonised
+Theme URI: 		http://themedango.com/wordpress/themes/skeletonised
+Description: 	A blank starter theme based on the responsive framework Skeleton by Dave Gamache.  Base structure uses Dave's stylesheets, plus there is a stripped down version of my WP framework.
+Version: 		1.0
+Author: 		Derry Birkett for Themedango.com
+Author URI: 	http://derrybirkett.com
+License: 		GNU General Public License v2 or later
+License URI: 	http://www.gnu.org/licenses/gpl-2.0.html
+Tags: 			framework, boilerplate, responsive, grid, mobile
+*/
+
+$colour: #000;
+$dark: #333;
+$light: #efefef;
+
+/* !BASE 
+--------------------------------------------------------------------------------*/
+// NObody likes underlined links and EVERYbody likes a little transitioning
+a		{ 	text-decoration: none; 
+			transition: 0.1s linear;
+		    -moz-transition: 0.1s linear;
+		    -webkit-transition: 0.1s linear;
+		    -o-transition: 0.1s linear;
+		    border-bottom: 1px dotted $dark;		    
+		}
+
+
+/* !SOME HANDY CLASSES
+--------------------------------------------------------------------------------*/
+.floatLeft	{ float: left; }
+.floatRight	{ float: right;}
+.clear		{ clear: both;}
+
+/* !HEADER & NAVIGATION
+--------------------------------------------------------------------------------*/
+#Header	{
+	a	{	border: none; }
+
+	#Top {
+
+		/* !UTILITY AREA
+		--------------------------------------------------------------------------------*/
+		#Utility
+			{
+				float: right;
+				text-align: right;
+				.widgettitle	{ font-size: 1em; display: none; }
+				ul				{ list-style: none; margin: 0em; padding: 0em;}
+				li				{ float: left; padding: 0.5em 1em 0.5em 0em;  margin-bottom: 0em;}
+			}
+		
+		#searchform { margin: 0; padding: 0;
+			input { margin: 0; }
+		}
+		
+		
+	}
+
+	#Branding {
+		 border-bottom: 1px solid $light; 
+		 padding: 2em 0em 1em 0em;;
+				
+				#Logo	{ border: none; vertical-align: middle; padding-right: 1em; text-align: center; width: 100%; }
+				h1, h5		{ margin: 0px; background: none; }
+		}
+
+	#TopNav {
+		.sf-menu { margin: 0em; margin-left: -15px;}
+	}
+}
+
+#Navigation {
+	.row { margin-bottom: 0em;}
+	#PrimaryNav {
+		.sf-menu {
+			margin: 0em; margin-left: -15px;
+		}
+	}
+}
+
+#main { 
+	clear:both;
+	border-top: 1em solid $light; 
+	padding-top: 2em; 
+}
+
+
+/* !primary
+--------------------------------------------------------------------------------*/
+#primary {
+
+	h1.page-title	{ margin-bottom:1em; }	
+	.category-archive-meta, .tag-archive-meta { margin-top: -2.5em; margin-bottom: 2em;  }
+	img a { border: none; }
+
+	.archive-meta { color: #666;}
+
+	article {	 
+		margin-bottom: 0.5em;
+		border-bottom: 1em solid $light;		
+		padding-top: 1em;
+		padding-bottom: 0em;
+		overflow: hidden;
+		position: relative;
+		
+		.entry-header {
+			h1.entry-title { 
+				margin: 0px;	
+				padding: 0em 0em 0em 0em;;
+				a { border-bottom: none; }
+			}
+		}
+		
+		.entry-content {
+			
+		}
+
+		.entry-format	{ padding: 0; margin: 0;}
+		.leave-reply	{ display: none	}
+		.entry-meta		{ padding: 0.5em 0em 1em 0em; border-bottom: 1px solid $light; margin-bottom: 0.5em;  }
+		.comments-link	{ float: right; }
+		.entry-content	{ padding: 1em 0em 0em 0em; }
+	
+		h1, h2, h3, h4, h5, h6	{	margin-top: 1em; background: none; }
+	
+		.featuredImage {	
+			img { max-width: 100%; height: auto; }
+			a { border: none; }
+		}
+		
+		table	{ width: 100%; }
+		th		{ font-weight: bold; border-bottom: 3px solid $light; padding: 0.5em; text-align: left; }
+		td		{ font-weight: normal; border-bottom: 1px solid $light; padding: 0.5em; }
+		
+		dt	{	font-weight: bold;	}
+		
+		address	{	padding: 1em; }
+		cite	{	font-style: italic;}
+		code kbd, samp, var	{	font-family: monospace;}
+		ins		{	background: #f6f6f6; }
+		pre		{ background: $dark; font-family: monospace; padding: 1em; margin: 1em 0em; border-radius: 1em; color: $light; }
+		sup,
+		sub {
+			font-size: 10px;
+			height: 0;
+			line-height: 1;
+			position: relative;
+			vertical-align: baseline;
+		}
+		sup {
+			bottom: 1ex;
+		}
+		sub {
+			top: .5ex;
+		}		
+		abbr, acronym, dfn {
+			border-bottom: 1px dotted #666;
+			cursor: help;
+		}		
+		ul, ol {
+			margin: 0 0 1.625em 2.5em;
+		}
+		ul {
+			list-style: square;
+		}
+		ol {
+			list-style-type: decimal;
+		}
+		ol ol {
+			list-style: upper-alpha;
+		}
+		ol ol ol {
+			list-style: lower-roman;
+		}
+		ol ol ol ol {
+			list-style: lower-alpha;
+		}
+		ul ul, ol ol, ul ol, ol ul {
+			margin-bottom: 0;
+		}
+				
+		.page-link { clear: both;}
+		
+	}
+	
+	article.sticky {
+		background: $dark;
+		color: $light;
+		padding: 1em;
+		padding-top: 0em;
+		border-top: none;
+		padding-bottom: 1em;
+		margin-bottom: 3em;
+		
+			.entry-title { padding: 0em; margin: 0.5em 0em;}
+			.entry-meta { border-bottom: none; padding-bottom: 0; }
+			.button a { color: $dark; }
+			h3, a	{
+			color: $light;
+			}		
+		}
+
+	/* WP Post Nav - Nobody Uses this */
+	#nav-single, #nav-above, #nav-below	{
+		display: none;
+		text-align: center; 	
+		margin-bottom: 1em;
+		a {}
+		.assistive-text	{ display: none;}		
+			.nav-next	{ text-align: right;}
+	}
+			
+	/* !Commenting
+	--------------------------------------------------------------------------------*/
+	#comments { 
+		
+		#comments-title { padding-bottom: 1em; border-bottom: 1px solid $light;}
+		article {
+			border-bottom: 1px solid $light;
+		}
+		ol.commentlist  {	margin-left: 0em;   }
+		.comment 		{	}
+		.comment-meta a	{	color: #999; }
+		.comment-content {	padding: 0.5em 0em 0em 0em;  }
+		.vcard img 		{  float: left; margin-right: 1em;  }
+		.reply 		 	{ float: right; margin-top: 0em;}
+		.reply a	 	{ border: none; margin-top: -2em;}
+	
+	}	
+		
+	#respond { border-top: 1em solid $light; padding-top: 1em;  }
+
+} 
+
+/* SINGLE */
+#Single {
+	#primary { 
+		article {
+			border: none;
+			.entry-header {
+				margin: 0em; padding: 0em;
+				.entry-title {
+					margin: 0em; padding: 0em;
+				}
+			}
+		}
+	}
+}
+
+
+/* SINGLE */
+#Page {
+	#primary { 
+		article {
+			border: none;
+			padding-top: 0em;
+			.entry-header {
+				margin: 0em; padding: 0em;
+				.entry-title {
+					margin: 0em; padding: 0em;
+				}
+			}
+		}
+	}
+}
+
+/* 404 */
+#fourzerofour {
+	article {
+		border: none;
+	}
+}
+/* !WIDGETS
+--------------------------------------------------------------------------------*/
+li.widget	 		{ 	list-style: none;	}	
+#secondary {
+	padding-top: 2em;
+	.widget	{	margin-bottom: 3em; }
+}
+
+#searchform { 	
+	input[type=text] {
+	width: 100px; display: inline-block;
+	}
+					
+	label	{ display: none; }
+}
+
+
+/* !FOOTER
+--------------------------------------------------------------------------------*/
+#colophon { 
+	border-top: 1em solid $light; padding: 2em 0em; margin-top: 1em; 
+}
+
+#SubFooter { 
+	padding: 2em 0em;
+}
+
+/* Some very specific fixes */
+.entry-content a , .wp-caption a, figure a, .gallery-item a, .attachment a { border: none; }
+
+
+.button { margin-bottom: 0;
+	a { border: none; margin-bottom: 0; }
+}
+
+/* !Navigation
+--------------------------------------------------------------------------------*/
+
+/*** ESSENTIAL STYLES ***/
+.sf-menu ul {
+	width:			15em; /* left offset of submenus need to match (see below) */
+}
+
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+	top:			3em; /* match top ul list item height */
+}
+
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+	left:			15em; /* match ul width */
+}
+
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+	left:			15em; /* match ul width */
+}
+
+/*** DEMO SKIN ***/
+.sf-menu {
+	float:			left;
+	margin-bottom:	1em;
+}
+.sf-menu a {
+	border-left:	1px solid #fff;
+	border-top:		1px solid #f6f6f6;
+	padding: 		.75em 1em;
+	text-decoration:none;
+}
+.sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
+	color:			#666;
+}
+.sf-menu li {
+	background:		none;
+}
+.sf-menu li li {
+	background:		#fff;
+}
+.sf-menu li li li {
+	background:		#fff;
+}
+.sf-menu li:hover, .sf-menu li.sfHover,
+.sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
+	background:		#fff;
+	color: #000;
+	outline:		0;
+}
+
+/* Tinynav */
+.tinynav { display: none;}
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		.tinynav { margin: 1em 0em; width: 100%; display: block;}
+		#main { margin-top: 0em;}
+		#menu-top { margin:0; padding: 0; display: none;  }
+		#menu-primary { margin:0; padding: 0; display: none;  }	
+		#secondary {}	
+	}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+
+		.tinynav { margin: 1em 0em; width: 100%; display: block;}
+		#main { margin-top: 0em;}
+		#menu-top  { margin:0; padding: 0; display: none;  }
+		#menu-primary  { margin:0; padding: 0; display: none;  }
+		#secondary {}
+		#Credits { float: left !important;}
+
+	}
